@@ -1,0 +1,27 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "A simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mau02ro/AvanzadoNodeJs-Platzi.git"
+  },
+  "author": "Mauro Hernández <mauroDeveloper@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mau02ro/AvanzadoNodeJs-Platzi/issues"
+  },
+  "homepage": "https://github.com/mau02ro/AvanzadoNodeJs-Platzi#readme",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  }
+}
