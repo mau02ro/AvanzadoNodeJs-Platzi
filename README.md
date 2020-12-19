@@ -14,6 +14,32 @@ Otro patrón de comunicación que implementa un sistema similar a **Pub/Sub** es
 
 ## Creando Módulo de Base de Datos (platziverse-db)
 
+### Pruevas unitarias con ava.js
+
+```
+npm install --save-dev ava
+```
+
+```js
+const test = require("ava");
+
+test.beforeEach(async () => {
+  //Se ejecutara antes de cada test
+});
+
+test(<Nombre>, (t) => {
+  //test
+})
+```
+
+#### Test Coverage
+
+Es una tecnica que permite ver si los tests que hemos creado están cubriendo el porcentaje, que nos va a decir cuánto del codigo está siendo abarcado.
+
+```
+npm i --save-dev nyc
+```
+
 ## Construyendo un servidor en tiempo real para Internet de las Cosas con Mosca/MQT
 
 ## Construyendo el agente de monitoreo (platziverse-agent)
