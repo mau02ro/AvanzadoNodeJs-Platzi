@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "setup": "SET DEBUG=platziverse:* && node setup",
+    "setup": "SET DEBUG=platziverse:* && node setup --yes",
     "test": "SET DEBUG=platziverse:* && nyc --reporter=lcov ava --verbose"
   },
   "repository": {

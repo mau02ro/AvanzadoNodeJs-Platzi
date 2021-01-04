@@ -1,23 +1,24 @@
 "use strict";
 
 const debug = require("debug")("platziverse:db:setup");
-const inquirer = require("inquirer");
+// const inquirer = require("inquirer");
 const chalk = require("chalk");
 
 const db = require("./");
 
-const prompt = inquirer.createPromptModule();
+// const prompt = inquirer.createPromptModule();
 
 async function setup() {
-  const answer = await prompt([
-    {
-      type: "confirm",
-      name: "setup",
-      message: "This will destroy your database, are you sure?",
-    },
-  ]);
+  let confirmation = process.argv.filter((p) => p === "-y" || p === "--yes")[0];
+  // const answer = await prompt([
+  //   {
+  //     type: "confirm",
+  //     name: "setup",
+  //     message: "This will destroy your database, are you sure?",
+  //   },
+  // ]);
 
-  if (!answer.setup) {
+  if (!confirmation) {
     return console.log("Nothing happene :)");
   }
 
