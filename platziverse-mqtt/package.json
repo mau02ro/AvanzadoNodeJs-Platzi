@@ -1,0 +1,33 @@
+{
+  "name": "platziverse-mqtt",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - MQTT Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "start-dev": "SET DEBUG=platziverse:* && nodemon server.js",
+    "start": "SET NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mau02ro/platziverse.git"
+  },
+  "author": "Mauro Hernández",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mau02ro/platziverse/issues"
+  },
+  "homepage": "https://github.com/mau02ro/platziverse#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.3.1",
+    "mosca": "^2.8.3",
+    "platziverse-db": "file:../platziverse-db",
+    "redis": "^3.0.2"
+  }
+}

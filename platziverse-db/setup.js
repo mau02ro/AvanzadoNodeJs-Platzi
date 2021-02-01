@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
-const debug = require("debug")("platziverse:db:setup");
+const debug = require('debug')('platziverse:db:setup');
 // const inquirer = require("inquirer");
-const chalk = require("chalk");
+const chalk = require('chalk');
 
-const db = require("./");
+const db = require('./');
 
 // const prompt = inquirer.createPromptModule();
 
 async function setup() {
-  let confirmation = process.argv.filter((p) => p === "-y" || p === "--yes")[0];
+  let confirmation = process.argv.filter((p) => p === '-y' || p === '--yes')[0];
   // const answer = await prompt([
   //   {
   //     type: "confirm",
@@ -19,26 +19,26 @@ async function setup() {
   // ]);
 
   if (!confirmation) {
-    return console.log("Nothing happene :)");
+    return console.log('Nothing happene :)');
   }
 
   const config = {
-    database: process.env.DB_NAME || "platziverse",
-    username: process.env.DB_USER || "platzi",
-    password: process.env.DB_PASS || "platzi",
-    host: process.env.DB_HOST || "localhost",
-    dialect: "postgres",
+    database: process.env.DB_NAME || 'platziverse',
+    username: process.env.DB_USER || 'platzi',
+    password: process.env.DB_PASS || 'platzi',
+    host: process.env.DB_HOST || 'localhost',
+    dialect: 'postgres',
     logging: (s) => debug(s),
     setup: true,
   };
   await db(config).catch(handleFatalError);
 
-  console.log("Success!");
+  console.log('Success!');
   process.exit(0);
 }
 
 function handleFatalError(err) {
-  console.error(`${chalk.red("[fatal error]")} ${err.message}}`);
+  console.error(`${chalk.red('[fatal error]')} ${err.message}}`);
   console.error(err.stack);
   process.exit(1);
 }

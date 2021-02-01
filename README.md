@@ -42,6 +42,12 @@ npm i --save-dev nyc
 
 ## Construyendo un servidor en tiempo real para Internet de las Cosas con Mosca/MQT
 
+### Definición de un Broker de Mensajería
+
+Platziverse **MQTT** va a ser el servidor encargado de recibir los mensajes de los agentes de monitoreo y redistribuirlos a los agentes que estarán **"escuchando"** o a la espera de esos mensajes.
+
+Un **"menssage broker"** es decir un intermediario que se encargará de recibir un mensaje y redistribuirlo para esto nosotros vamos a implementar el protocolo **MQTT** para que realice esta función en nuestro servidor pro las ventajas que este ofrece al estar optimizado para aplicaciones de **IoT** este protocolo **"maquina a máquina"** utiliza un ancho de banda muy bajo y puede funcionar con conexiones móviles y situaciones de este estilo donde el ancho de banda es limitado en muchas ocasiones y el consumo de datos debe ser lo más bajo posible
+
 ## Construyendo el agente de monitoreo (platziverse-agent)
 
 ## Construyendo una API REST con Express (platziverse-api)
