@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function setupAgent(AgentModel) {
   async function createOrUpdate(agent) {
